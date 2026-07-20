@@ -18,14 +18,31 @@ public class CarService : ICarService
         _repository = repository;
         _mapper = mapper;
     }
+    public async Task<CarGetDto> GetByIdAsync(long id)
+    {
+        var entity = await _repository.GetById(id);
+
+        if (entity == null)
+            throw new Exception("Car not found");
+
+        return _mapper.Map<CarGetDto>(entity);
+    }
+
+    public async Task<IEnumerable<CarGetDto>> GetAllAsync()
+    {
+        var cars = _repository.GetAll();
+
+        return _mapper.Map<IEnumerable<CarGetDto>>(cars);
+    }
+
 
     public async Task CreateAsync(CarCreateDto dto)
     {
         var entity = _mapper.Map<Car>(dto);
 
-         _repository.Add(entity);
+        _repository.Add(entity);
 
-         await _repository.SaveChangeAsync();
+        await _repository.SaveChangeAsync();
     }
 
     public async Task UpdateAsync(CarUpdateDto dto)
@@ -52,22 +69,5 @@ public class CarService : ICarService
         _repository.Delete(entity);
 
         await _repository.SaveChangeAsync();
-    }
-
-    public async Task<CarGetDto> GetByIdAsync(long id)
-    {
-        var entity =  _repository.GetById(id);
-
-        if (entity == null)
-            throw new Exception("Car not found");
-
-        return _mapper.Map<CarGetDto>(entity);
-    }
-
-    public async Task<IEnumerable<CarGetDto>> GetAllAsync()
-    {
-        var cars =  _repository.GetAll();
-
-        return _mapper.Map<IEnumerable<CarGetDto>>(cars);
     }
 }

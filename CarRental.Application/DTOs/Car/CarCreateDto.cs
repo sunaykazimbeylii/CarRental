@@ -1,7 +1,4 @@
 ﻿using CarRental.Domain.Enums;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CarRental.Application.DTOs.Car
 {
@@ -12,4 +9,4 @@ namespace CarRental.Application.DTOs.Car
 
 
    }
-}
+

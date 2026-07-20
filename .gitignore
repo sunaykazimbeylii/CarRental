@@ -1,0 +1,67 @@
+############################
+# Build
+############################
+bin/
+obj/
+out/
+publish/
+
+############################
+# Visual Studio
+############################
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+
+############################
+# VS Code / Rider
+############################
+.vscode/
+.idea/
+
+############################
+# Logs
+############################
+*.log
+
+############################
+# Test
+############################
+TestResults/
+BenchmarkDotNet.Artifacts/
+coverage/
+coverage*.json
+coverage*.xml
+
+############################
+# NuGet
+############################
+*.nupkg
+packages/
+
+############################
+# Environment
+############################
+.env
+.env.*
+
+############################
+# ASP.NET Core
+############################
+appsettings.Development.json
+
+############################
+# Uploads
+############################
+wwwroot/uploads/
+wwwroot/files/
+
+############################
+# OS
+############################
+Thumbs.db
+Desktop.ini
+.DS_Store
