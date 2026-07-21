@@ -16,10 +16,15 @@ public class CarsController : ControllerBase
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAll()
+    public async Task<IActionResult> GetAll(
+    int page,
+    int take,
+    string? sort)
     {
-        return Ok(await _service.GetAllAsync());
+        return Ok(await _service.GetAllAsync(page, take, sort));
     }
+
+   
 
     [HttpGet("{id}")]
 

@@ -11,7 +11,10 @@ namespace CarRental.Application.Interfaces.Services
         Task DeleteAsync(long id);
 
         Task<CarGetDto> GetByIdAsync(long id);
-
-        Task<IEnumerable<CarGetDto>> GetAllAsync();
+     
+        Task<IReadOnlyList<CarGetDto>> GetAllAsync(
+    int page,
+    int take,
+    string? sort);
     }
 }

@@ -18,40 +18,35 @@ namespace CarRentalSystem.API.Implementations.Repository.Generic
         }
 
         public IQueryable<T> GetAll(
-
-            Expression<Func<T, bool>>? func = null,
-            Expression<Func<T, object>>? sort = null,
-            bool isDesc = false,
-            bool takeDeleted = false,
-            int page = 0,
-            int take = 0,
-            params string[]? includes
-            )
+     Expression<Func<T, bool>>? func = null,
+     Expression<Func<T, object>>? sort = null,
+     bool isDesc = false,
+     bool takeDeleted = false,
+     int page = 0,
+     int take = 0,
+     params string[]? includes)
         {
             IQueryable<T> query = _dbSet;
-            if (func is not null)
-            {
-                query = query.Where(func);
-            }
-            if (sort is not null)
-            {
-                if (isDesc)
-                {
-                    query = _dbSet.OrderByDescending(sort);
-                }
-                else
-                    query = _dbSet.OrderBy(sort);
-            }
-            if (page > 0 && take > 0)
-            {
-                query = _dbSet.Skip((page - 1) * take).Take(take);
 
-            }
+            if (!takeDeleted)
+                query = query.Where(x => !x.IsDeleted);
+
+            if (func is not null)
+                query = query.Where(func);
+
             if (includes is not null)
-            {
                 query = _getIncludes(query, includes);
 
+            if (sort is not null)
+            {
+                query = isDesc
+                    ? query.OrderByDescending(sort)
+                    : query.OrderBy(sort);
             }
+
+            if (page > 0 && take > 0)
+                query = query.Skip((page - 1) * take).Take(take);
+
             return query;
         }
 
