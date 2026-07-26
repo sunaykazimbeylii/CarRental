@@ -748,7 +748,11 @@
           "net10.0": {
             "framework": "net10.0",
             "targetAlias": "net10.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRental.Application\\CarRental.Application.csproj": {
+                "projectPath": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRental.Application\\CarRental.Application.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -767,6 +771,12 @@
         "net10.0": {
           "framework": "net10.0",
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[10.0.10, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

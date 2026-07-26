@@ -1,5 +1,6 @@
 using CarRental.API.Middlewares;
 using CarRental.Application;
+using CarRental.Infrastructure;
 using CarRental.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,7 +14,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services
     .AddPersistanceServices(builder.Configuration)
-    .AddApplicationServices();
+    .AddApplicationServices()
+    .AddInfrastructureServices(builder.Configuration);
     
 var app = builder.Build();
 if (app.Environment.IsDevelopment())

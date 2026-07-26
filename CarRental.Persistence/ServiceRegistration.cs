@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using CarRental.Persistence.Implementations.Services;
 
 namespace CarRental.Persistence
 {
@@ -32,6 +33,7 @@ namespace CarRental.Persistence
 
 
             services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 
             return services;
