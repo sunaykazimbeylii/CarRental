@@ -18,7 +18,7 @@ namespace CarRental.Persistence
         {
 
             services.AddDbContext<AppDbContext>(opt => opt.UseSqlServer(configuration.GetConnectionString("default")));
-            services.AddIdentity<AppUser, IdentityRole>(opt =>
+            services.AddIdentity<AppUser, IdentityRole<long>>(opt =>
             {
                 opt.Password.RequireNonAlphanumeric = false;
                 opt.Password.RequiredLength = 8;

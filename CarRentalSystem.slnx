@@ -8,5 +8,6 @@
     <Project Path="CarRental.Infrastructure/CarRental.Infrastructure.csproj" />
     <Project Path="CarRental.Persistence/CarRental.Persistence.csproj" />
   </Folder>
+  <Project Path="CarRental.Tests/CarRental.Tests.csproj" Id="c68fddf6-ada9-4e6c-9d06-208dc12ef26a" />
   <Project Path="CarRentalSystem/CarRentalSystem.API.csproj" />
 </Solution>

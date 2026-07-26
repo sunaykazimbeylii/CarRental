@@ -35,8 +35,7 @@ namespace CarRental.Domain.Entities
 
         public Color Color { get; set; }
 
-        public long CoorId { get; set; }
-
+        public long ColorId { get; set; }
         public ICollection<Rental> Rentals { get; set; }
 
         public ICollection<CarImage> Images { get; set; }

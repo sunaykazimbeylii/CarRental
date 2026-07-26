@@ -2,7 +2,7 @@
 
 namespace CarRental.Domain.Entities
 {
-    public class AppUser:IdentityUser
+    public class AppUser:IdentityUser<long>
     {
         public string Name { get; set; }
         public string Surname { get; set; }
