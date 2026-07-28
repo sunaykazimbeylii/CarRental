@@ -1,5 +1,6 @@
 ﻿using CarRental.Application.DTOs.Car;
 using CarRental.Application.Interfaces.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CarRental.API.Controllers;
@@ -14,7 +15,7 @@ public class CarsController : ControllerBase
     {
         _service = service;
     }
-
+    [Authorize(Roles = "User")]
     [HttpGet]
     public async Task<IActionResult> GetAll(
     int page,
@@ -24,8 +25,8 @@ public class CarsController : ControllerBase
         return Ok(await _service.GetAllAsync(page, take, sort));
     }
 
-   
 
+    [Authorize(Roles = "User")]
     [HttpGet("{id}")]
 
     public async Task<IActionResult> GetById(long id)
@@ -33,6 +34,7 @@ public class CarsController : ControllerBase
         return Ok(await _service.GetByIdAsync(id));
     }
 
+    [Authorize(Roles = "Admin")]
     [HttpPost]
     public async Task<IActionResult> Create([FromForm]CarCreateDto dto)
     {
@@ -40,6 +42,8 @@ public class CarsController : ControllerBase
 
         return StatusCode(StatusCodes.Status201Created);
     }
+
+    [Authorize(Roles = "Admin")]
 
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(long id,[FromForm] CarUpdateDto dto)
@@ -53,6 +57,7 @@ public class CarsController : ControllerBase
 
         return NoContent();
     }
+    [Authorize(Roles = "Admin")]
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(long id)

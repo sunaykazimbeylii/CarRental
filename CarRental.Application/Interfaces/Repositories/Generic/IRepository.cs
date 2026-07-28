@@ -5,7 +5,7 @@ namespace CarRental.Application.Interfaces.Repository.Generic
 {
     public interface IRepository<T> where T : BaseEntity, new()
     {
-        IQueryable<T> GetAll(
+       IQueryable<T> GetAll(
            Expression<Func<T, bool>>? func = null,
            Expression<Func<T, object>>? sort = null,
            bool isDesc = false,
