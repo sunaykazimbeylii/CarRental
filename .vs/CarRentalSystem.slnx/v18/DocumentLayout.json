@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{1E9CEA73-B8EE-7595-A025-103725CA7562}|CarRentalSystem\\CarRentalSystem.API.csproj|solutionrelative:carrentalsystem\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1E9CEA73-B8EE-7595-A025-103725CA7562}|CarRentalSystem\\CarRentalSystem.API.csproj|c:\\users\\sunay\\source\\repos\\carrentalsystem\\carrentalsystem\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1E9CEA73-B8EE-7595-A025-103725CA7562}|CarRentalSystem\\CarRentalSystem.API.csproj|solutionrelative:carrentalsystem\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BC450137-ECDC-D0A6-9C70-887579DD4AD0}|CarRental.Infrastructure\\CarRental.Infrastructure.csproj|c:\\users\\sunay\\source\\repos\\carrentalsystem\\carrental.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC450137-ECDC-D0A6-9C70-887579DD4AD0}|CarRental.Infrastructure\\CarRental.Infrastructure.csproj|solutionrelative:carrental.infrastructure\\serviceregistration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1E9CEA73-B8EE-7595-A025-103725CA7562}|CarRentalSystem\\CarRentalSystem.API.csproj|c:\\users\\sunay\\source\\repos\\carrentalsystem\\carrentalsystem\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1E9CEA73-B8EE-7595-A025-103725CA7562}|CarRentalSystem\\CarRentalSystem.API.csproj|solutionrelative:carrentalsystem\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{D1CFC635-6F68-727F-E951-9D087D3A3DBF}|CarRental.Application\\CarRental.Application.csproj|c:\\users\\sunay\\source\\repos\\carrentalsystem\\carrental.application\\interfaces\\services\\iauthenticationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -226,20 +226,20 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ServiceRegistration.cs",
               "DocumentMoniker": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRental.Infrastructure\\ServiceRegistration.cs",
               "RelativeDocumentMoniker": "CarRental.Infrastructure\\ServiceRegistration.cs",
               "ToolTip": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRental.Infrastructure\\ServiceRegistration.cs",
               "RelativeToolTip": "CarRental.Infrastructure\\ServiceRegistration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAApAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-26T21:23:53.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "AccountsController.cs",
               "DocumentMoniker": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRentalSystem\\Controllers\\AccountsController.cs",
               "RelativeDocumentMoniker": "CarRentalSystem\\Controllers\\AccountsController.cs",
@@ -247,8 +247,7 @@
               "RelativeToolTip": "CarRentalSystem\\Controllers\\AccountsController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T20:15:02.037Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T20:15:02.037Z"
             },
             {
               "$type": "Document",
@@ -260,8 +259,7 @@
               "RelativeToolTip": "CarRental.Application\\Validators\\User\\RegisterDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T20:10:01.764Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T20:10:01.764Z"
             },
             {
               "$type": "Document",
@@ -273,8 +271,7 @@
               "RelativeToolTip": "CarRental.Application\\Interfaces\\Services\\IAuthenticationService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T18:59:28.846Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T18:59:28.846Z"
             },
             {
               "$type": "Document",
@@ -286,8 +283,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Implementations\\Services\\AuthenticationService.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T18:58:02.169Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T18:58:02.169Z"
             },
             {
               "$type": "Document",
@@ -297,7 +293,7 @@
               "RelativeDocumentMoniker": "CarRentalSystem\\Program.cs",
               "ToolTip": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRentalSystem\\Program.cs",
               "RelativeToolTip": "CarRentalSystem\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA2AAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAiwBwAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-20T17:40:44.501Z",
               "EditorCaption": ""
@@ -312,8 +308,7 @@
               "RelativeToolTip": "CarRental.Infrastructure\\Implementations\\Service\\TokenService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAowDEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T21:02:55.648Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T21:02:55.648Z"
             },
             {
               "$type": "Document",
@@ -325,8 +320,7 @@
               "RelativeToolTip": "CarRentalSystem\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-20T17:43:37.328Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:43:37.328Z"
             },
             {
               "$type": "Document",
@@ -338,8 +332,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\Token\\TokenResponseDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T21:13:53.414Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T21:13:53.414Z"
             },
             {
               "$type": "Document",
@@ -351,8 +344,7 @@
               "RelativeToolTip": "CarRental.Application\\Interfaces\\Services\\ITokenService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T21:12:30.552Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T21:12:30.552Z"
             },
             {
               "$type": "Document",
@@ -364,8 +356,7 @@
               "RelativeToolTip": "CarRental.Application\\Validators\\User\\LoginDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T20:09:30.812Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T20:09:30.812Z"
             },
             {
               "$type": "Document",
@@ -377,8 +368,7 @@
               "RelativeToolTip": "CarRental.Persistence\\ServiceRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAABMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:38:51.821Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:38:51.821Z"
             },
             {
               "$type": "Document",
@@ -390,8 +380,7 @@
               "RelativeToolTip": "CarRental.Application\\MappingProfiles\\AppUserProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T19:59:01.125Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T19:59:01.125Z"
             },
             {
               "$type": "Document",
@@ -403,8 +392,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\AppUser\\LoginDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T18:55:17.769Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T18:55:17.769Z"
             },
             {
               "$type": "Document",
@@ -416,8 +404,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\AppUser\\RegisterDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-26T18:55:09.473Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-26T18:55:09.473Z"
             },
             {
               "$type": "Document",
@@ -429,8 +416,7 @@
               "RelativeToolTip": "CarRental.Tests\\Services\\CarServiceTests.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAQwBQAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T16:36:46.837Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T16:36:46.837Z"
             },
             {
               "$type": "Document",
@@ -442,8 +428,7 @@
               "RelativeToolTip": "CarRental.Tests\\UnitTest1.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T16:32:34.889Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T16:32:34.889Z"
             },
             {
               "$type": "Document",
@@ -455,8 +440,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\ReviewConfiguration.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAUwBwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T14:11:01.197Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T14:11:01.197Z"
             },
             {
               "$type": "Document",
@@ -468,8 +452,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Review.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T14:06:10.403Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T14:06:10.403Z"
             },
             {
               "$type": "Document",
@@ -481,8 +464,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\AppUser.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T14:02:54.167Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T14:02:54.167Z"
             },
             {
               "$type": "Document",
@@ -494,8 +476,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\RentalConfiguration.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwCIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T14:01:24.759Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T14:01:24.759Z"
             },
             {
               "$type": "Document",
@@ -507,8 +488,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Rental.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T14:00:26.385Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T14:00:26.385Z"
             },
             {
               "$type": "Document",
@@ -520,8 +500,7 @@
               "RelativeToolTip": "CarRental.Application\\ServiceRegistration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:23:46.855Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:23:46.855Z"
             },
             {
               "$type": "Document",
@@ -533,8 +512,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\PaymentConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:57:52.04Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:57:52.04Z"
             },
             {
               "$type": "Document",
@@ -546,8 +524,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Payment.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:58:22.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:58:22.777Z"
             },
             {
               "$type": "Document",
@@ -559,8 +536,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\ColorConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAUwBgAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:57:39.477Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:57:39.477Z"
             },
             {
               "$type": "Document",
@@ -572,8 +548,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Color.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:57:25.575Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:57:25.575Z"
             },
             {
               "$type": "Document",
@@ -585,8 +560,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Category.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:57:08.321Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:57:08.321Z"
             },
             {
               "$type": "Document",
@@ -598,8 +572,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\CategoryConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:57:06.209Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:57:06.209Z"
             },
             {
               "$type": "Document",
@@ -611,8 +584,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\CarImageConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:56:16.103Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:56:16.103Z"
             },
             {
               "$type": "Document",
@@ -624,8 +596,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\CarConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:54:16.073Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:54:16.073Z"
             },
             {
               "$type": "Document",
@@ -637,8 +608,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\BrandConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:52:36.458Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:52:36.458Z"
             },
             {
               "$type": "Document",
@@ -650,8 +620,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Brand.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:52:14.358Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:52:14.358Z"
             },
             {
               "$type": "Document",
@@ -663,8 +632,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\BranchConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:51:58.908Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:51:58.908Z"
             },
             {
               "$type": "Document",
@@ -676,8 +644,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Configurations\\AppUserConfiguration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:51:13.58Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:51:13.58Z"
             },
             {
               "$type": "Document",
@@ -689,8 +656,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Branch.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-21T13:50:27.117Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-21T13:50:27.117Z"
             },
             {
               "$type": "Document",
@@ -702,8 +668,7 @@
               "RelativeToolTip": "CarRental.Domain\\Entities\\Car.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAIwCUAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T16:01:15.065Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T16:01:15.065Z"
             },
             {
               "$type": "Document",
@@ -715,8 +680,7 @@
               "RelativeToolTip": "CarRental.Application\\Validators\\Car\\CarUpdateDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:14:05.782Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:14:05.782Z"
             },
             {
               "$type": "Document",
@@ -728,8 +692,7 @@
               "RelativeToolTip": "CarRental.Application\\Validators\\Car\\CarCreateDtoValidator.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACYAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:12:18.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:12:18.777Z"
             },
             {
               "$type": "Document",
@@ -741,8 +704,7 @@
               "RelativeToolTip": "CarRentalSystem\\Controllers\\CarsController.cs",
               "ViewState": "AgIAABMAAAAAAAAAAAAgwBkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T16:31:41.231Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T16:31:41.231Z"
             },
             {
               "$type": "Document",
@@ -754,8 +716,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Implementations\\Services\\CarService.cs",
               "ViewState": "AgIAADQAAAAAAAAAAAAowGIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:36:57.619Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T21:36:57.619Z"
             },
             {
               "$type": "Document",
@@ -767,8 +728,7 @@
               "RelativeToolTip": "CarRental.Application\\Interfaces\\Services\\ICarService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:35:47.212Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T21:35:47.212Z"
             },
             {
               "$type": "Document",
@@ -780,8 +740,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Implementations\\Repositories\\Generic\\Repository.cs",
               "ViewState": "AgIAABIAAAAAAAAAAAAAwCsAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T20:43:29.496Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T20:43:29.496Z"
             },
             {
               "$type": "Document",
@@ -793,8 +752,7 @@
               "RelativeToolTip": "CarRentalSystem\\Middlewares\\ExceptionHandlingMiddleware.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T18:01:42.364Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T18:01:42.364Z"
             },
             {
               "$type": "Document",
@@ -806,8 +764,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Contexts\\AppDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T20:50:25.741Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T20:50:25.741Z"
             },
             {
               "$type": "Document",
@@ -819,8 +776,7 @@
               "RelativeToolTip": "CarRental.Application\\MappingProfiles\\CarProfile.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-20T17:02:51.041Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T17:02:51.041Z"
             },
             {
               "$type": "Document",
@@ -832,8 +788,7 @@
               "RelativeToolTip": "CarRental.Persistence\\Implementations\\Repositories\\CarRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T20:58:29.398Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T20:58:29.398Z"
             },
             {
               "$type": "Document",
@@ -845,8 +800,7 @@
               "RelativeToolTip": "CarRental.Application\\Interfaces\\Repositories\\ICarRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T20:56:51.07Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T20:56:51.07Z"
             },
             {
               "$type": "Document",
@@ -858,8 +812,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\Car\\CarCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:17:18.098Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T21:17:18.098Z"
             },
             {
               "$type": "Document",
@@ -871,8 +824,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\Car\\CarGetDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:12:43.543Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T21:12:43.543Z"
             },
             {
               "$type": "Document",
@@ -884,8 +836,7 @@
               "RelativeToolTip": "CarRental.Application\\DTOs\\Car\\CarUpdateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T21:20:13.003Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T21:20:13.003Z"
             },
             {
               "$type": "Document",
@@ -897,8 +848,7 @@
               "RelativeToolTip": "CarRental.Application\\CarRental.Application.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-07-20T15:58:32.976Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-20T15:58:32.976Z"
             },
             {
               "$type": "Document",
@@ -910,8 +860,7 @@
               "RelativeToolTip": "CarRental.Application\\Interfaces\\Repositories\\Generic\\IRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-19T20:36:31.342Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-19T20:36:31.342Z"
             }
           ]
         }
