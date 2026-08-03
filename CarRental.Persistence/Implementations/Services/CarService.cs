@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CarRental.Application.DTOs.Car;
+using CarRental.Application.Exceptions;
 using CarRental.Application.Interfaces.Repositories;
 using CarRental.Application.Interfaces.Services;
 using CarRental.Domain.Entities;
@@ -24,16 +25,17 @@ public class CarService : ICarService
     }
     public async Task<CarGetDto> GetByIdAsync(long id)
     {
-        var entity = await _repository.GetById(id);
+        var entity = await _repository.GetByIdAsync(id);
 
         if (entity == null)
-            throw new Exception("Car not found");
+            throw new NotFoundException(nameof(Car));
 
         return _mapper.Map<CarGetDto>(entity);
     }
 
 
     public async Task<IReadOnlyList<CarGetDto>> GetAllAsync(
+       CarFilterDto filter,
     int page,
     int take,
     string? sort)
@@ -46,20 +48,36 @@ public class CarService : ICarService
             _ => x => x.Id
         };
 
-        IReadOnlyList<Car> cars = await _repository
-            .GetAll(     
-                sort: sortExpression,
-                page: page,
-                take: take,
-                includes: new[]
-                {
-                nameof(Car.Brand),
-                nameof(Car.Category),
-                nameof(Car.Branch),
-                nameof(Car.Color)
-                })
-            .ToListAsync();
+        var query = _repository.GetAll(
+    sort: sortExpression,
+    page: page,
+    take: take,
+    includes: new[]
+    {
+        nameof(Car.Brand),
+        nameof(Car.Category),
+        nameof(Car.Branch),
+        nameof(Car.Color)
+    });
+        if (!string.IsNullOrWhiteSpace(filter.Model))
+            query = query.Where(x => x.Model.Contains(filter.Model));
 
+        if (filter.BrandId.HasValue)
+            query = query.Where(x => x.BrandId == filter.BrandId.Value);
+
+        if (filter.CategoryId.HasValue)
+            query = query.Where(x => x.CategoryId == filter.CategoryId.Value);
+
+        if (filter.MinPrice.HasValue)
+            query = query.Where(x => x.DailyPrice >= filter.MinPrice);
+
+        if (filter.MaxPrice.HasValue)
+            query = query.Where(x => x.DailyPrice <= filter.MaxPrice.Value);
+
+        if (filter.IsAvailable.HasValue)
+            query = query.Where(x => x.IsAvailable == filter.IsAvailable.Value);
+
+        var cars = await query.ToListAsync();
         return _mapper.Map<IReadOnlyList<CarGetDto>>(cars);
     }
 
@@ -70,12 +88,12 @@ public class CarService : ICarService
 
         _repository.Add(entity);
 
-        await _repository.SaveChangeAsync();
+        await _repository.SaveChangesAsync();
     }
 
     public async Task UpdateAsync(CarUpdateDto dto)
     {
-        var entity = await _repository.GetById(dto.Id);
+        var entity = await _repository.GetByIdAsync(dto.Id);
 
         if (entity == null)
             throw new Exception("Car not found");
@@ -84,18 +102,18 @@ public class CarService : ICarService
 
         _repository.Update(entity);
 
-        await _repository.SaveChangeAsync();
+        await _repository.SaveChangesAsync();
     }
 
     public async Task DeleteAsync(long id)
     {
-        var entity = await _repository.GetById(id);
+        var entity = await _repository.GetByIdAsync(id);
 
         if (entity == null)
             throw new Exception("Car not found");
 
         _repository.Delete(entity);
 
-        await _repository.SaveChangeAsync();
+        await _repository.SaveChangesAsync();
     }
 }

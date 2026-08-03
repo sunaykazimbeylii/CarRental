@@ -4,12 +4,12 @@ using CarRental.Persistence.Contexts;
 using Microsoft.EntityFrameworkCore;
 using System.Linq.Expressions;
 
-namespace CarRentalSystem.API.Implementations.Repository.Generic
+namespace CarRental.Persistence.Implementations.Repositories
 {
-    public class Repository<T> : IRepository<T> where T : BaseEntity, new()
+    internal class Repository<T> : IRepository<T> where T : BaseEntity, new()
     {
-        private readonly AppDbContext _context;
-        private readonly DbSet<T> _dbSet;
+        protected readonly DbSet<T> _dbSet;
+        protected readonly AppDbContext _context;
 
         public Repository(AppDbContext context)
         {
@@ -17,71 +17,88 @@ namespace CarRentalSystem.API.Implementations.Repository.Generic
             _dbSet = context.Set<T>();
         }
 
+
         public IQueryable<T> GetAll(
-     Expression<Func<T, bool>>? func = null,
-     Expression<Func<T, object>>? sort = null,
-     bool isDesc = false,
-     bool takeDeleted = false,
-     int page = 0,
-     int take = 0,
-     params string[]? includes)
+            Expression<Func<T, bool>>? func = null,
+            Expression<Func<T, object>>? sort = null,
+            bool isDesc = false,
+            bool isIgnore = false,
+            int page = 0,
+            int take = 0,
+            params string[]? includes
+
+            )
         {
             IQueryable<T> query = _dbSet;
-
-            if (!takeDeleted)
-                query = query.Where(x => !x.IsDeleted);
 
             if (func is not null)
                 query = query.Where(func);
 
-            if (includes is not null)
-                query = _getIncludes(query, includes);
+
 
             if (sort is not null)
             {
-                query = isDesc
-                    ? query.OrderByDescending(sort)
-                    : query.OrderBy(sort);
+                if (isDesc)
+                    query = query.OrderByDescending(sort);
+                else
+                    query = query.OrderBy(sort);
             }
 
             if (page > 0 && take > 0)
+            {
                 query = query.Skip((page - 1) * take).Take(take);
+            }
 
-            return query;
-        }
 
-        public async Task<T> GetById(long id, params string[] includes)
-        {
-            IQueryable<T> query = _dbSet;
             if (includes is not null)
             {
                 query = _getIncludes(query, includes);
             }
-            return await query.FirstOrDefaultAsync(c => c.Id == id);
 
+            if (isIgnore)
+            {
+                query = query.IgnoreQueryFilters();
+            }
+
+            return query;
+
+
+        }
+
+        public async Task<T?> GetByIdAsync(long id, params string[] includes)
+        {
+            IQueryable<T> query = _dbSet;
+
+
+            if (includes is not null)
+            {
+                query = _getIncludes(query, includes);
+            }
+
+            return await query.FirstOrDefaultAsync(c => c.Id == id);
         }
 
         public void Add(T entity)
         {
             _dbSet.Add(entity);
         }
-
         public void Update(T entity)
         {
             _dbSet.Update(entity);
-
         }
+
         public void Delete(T entity)
         {
             _dbSet.Remove(entity);
-
         }
-        public async Task SaveChangeAsync()
+
+        public async Task SaveChangesAsync()
         {
             await _context.SaveChangesAsync();
         }
 
-        protected IQueryable<T> _getIncludes(IQueryable<T> query, params string[]? includes)
+
+        protected IQueryable<T> _getIncludes(IQueryable<T> query, params string[] includes)
         {
 
             for (int i = 0; i < includes.Length; i++)
@@ -95,5 +112,7 @@ namespace CarRentalSystem.API.Implementations.Repository.Generic
         {
             return await _dbSet.AnyAsync(func);
         }
+
     }
 }
+

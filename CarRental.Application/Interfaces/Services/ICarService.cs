@@ -1,4 +1,5 @@
 ﻿using CarRental.Application.DTOs.Car;
+using Microsoft.AspNetCore.Mvc;
 
 namespace CarRental.Application.Interfaces.Services
 {
@@ -13,8 +14,10 @@ namespace CarRental.Application.Interfaces.Services
         Task<CarGetDto> GetByIdAsync(long id);
      
         Task<IReadOnlyList<CarGetDto>> GetAllAsync(
+    [FromQuery] CarFilterDto filter,
     int page,
     int take,
-    string? sort);
+    string? sort
+       );
     }
 }

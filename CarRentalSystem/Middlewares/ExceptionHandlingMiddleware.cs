@@ -1,6 +1,5 @@
 ﻿using CarRental.Application.Exceptions;
 using System.ComponentModel.DataAnnotations;
-using System.Net;
 using System.Text.Json;
 
 namespace CarRental.API.Middlewares;

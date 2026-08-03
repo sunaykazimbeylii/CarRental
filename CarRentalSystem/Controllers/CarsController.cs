@@ -18,11 +18,13 @@ public class CarsController : ControllerBase
     [Authorize(Roles = "User")]
     [HttpGet]
     public async Task<IActionResult> GetAll(
+    [FromQuery] CarFilterDto filter,
     int page,
     int take,
-    string? sort)
+    string? sort
+      )
     {
-        return Ok(await _service.GetAllAsync(page, take, sort));
+        return Ok(await _service.GetAllAsync(filter,page, take, sort));
     }
 
 
