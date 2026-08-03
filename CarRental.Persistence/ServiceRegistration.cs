@@ -4,12 +4,11 @@ using CarRental.Application.Services;
 using CarRental.Domain.Entities;
 using CarRental.Persistence.Contexts;
 using CarRental.Persistence.Implementations.Repositories;
-using Microsoft.AspNetCore.Builder;
+using CarRental.Persistence.Implementations.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.EntityFrameworkCore;
-using CarRental.Persistence.Implementations.Services;
 
 namespace CarRental.Persistence
 {
@@ -34,6 +33,7 @@ namespace CarRental.Persistence
 
 
             services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 
 

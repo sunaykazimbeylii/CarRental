@@ -41,5 +41,6 @@ namespace CarRental.Domain.Entities
         public ICollection<CarImage> Images { get; set; }
 
         public ICollection<Review> Reviews { get; set; }
+        public ICollection<CarFeature> CarFeatures { get; set; }
     }
 }

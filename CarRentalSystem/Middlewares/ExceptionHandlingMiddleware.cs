@@ -1,4 +1,6 @@
-﻿using System.Net;
+﻿using CarRental.Application.Exceptions;
+using System.ComponentModel.DataAnnotations;
+using System.Net;
 using System.Text.Json;
 
 namespace CarRental.API.Middlewares;
@@ -20,16 +22,22 @@ public class ExceptionHandlingMiddleware
         }
         catch (Exception ex)
         {
-            context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
             context.Response.ContentType = "application/json";
+
+            context.Response.StatusCode = ex switch
+            {
+                NotFoundException => StatusCodes.Status404NotFound,
+
+                ValidationException => StatusCodes.Status400BadRequest,
+                _ => StatusCodes.Status500InternalServerError
+            };
 
             var response = new
             {
                 Message = ex.Message
             };
 
-            await context.Response.WriteAsync(
-                JsonSerializer.Serialize(response));
+            await context.Response.WriteAsync(JsonSerializer.Serialize(response));
         }
     }
 }

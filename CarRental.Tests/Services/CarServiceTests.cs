@@ -1,49 +1,75 @@
-﻿using CarRental.Application.Interfaces.Repositories;
+﻿using AutoMapper;
+using CarRental.Application.DTOs.Car;
+using CarRental.Application.Interfaces.Repositories;
+using CarRental.Application.Services;
 using CarRental.Domain.Entities;
+using CarRental.Domain.Enums;
 using Moq;
 
-namespace CarRental.Tests.Services
+namespace CarRental.Tests.Services;
+
+public class CarServiceTests
 {
-    public class CarServiceTests
+    private readonly Mock<ICarRepository> _repositoryMock;
+    private readonly Mock<IMapper> _mapperMock;
+    private readonly CarService _service;
+
+    public CarServiceTests()
     {
-        private readonly Mock<ICarRepository> _repositoryMock;
+        _repositoryMock = new Mock<ICarRepository>();
+        _mapperMock = new Mock<IMapper>();
 
+        _service = new CarService(
+            _repositoryMock.Object,
+            _mapperMock.Object);
+    }
 
-        public CarServiceTests()
+    [Fact]
+    public async Task GetByIdAsync_Should_Return_Car()
+    {
+        // Arrange
+
+        var car = new Car
         {
-            _repositoryMock = new Mock<ICarRepository>();
-        }
+            Id = 1,
+            Model = "BMW"
+        };
 
+        var dto = new CarGetDto(
+      1,
+      "BMW",
+      2024,
+      "10-AA-001",
+      150,
+      10000,
+      FuelType.Petrol,
+      Transmission.Automatic,
+      true,
+      "BMW",
+      "Sedan",
+      "Baku",
+      "Black"
+  );
 
-        [Fact]
-        public async Task GetByIdAsync_Should_Return_Car()
-        {
-            // Arrange
+        _repositoryMock
+            .Setup(x => x.GetById(1))
+            .ReturnsAsync(car);
 
-            var car = new Car
-            {
-                Id = 1,
-                Model = "BMW"
-            };
+        _mapperMock
+            .Setup(x => x.Map<CarGetDto>(car))
+            .Returns(dto);
 
+        // Act
 
-            _repositoryMock
-                .Setup(x => x.GetById(1))
-                .ReturnsAsync(car);
+        var result = await _service.GetByIdAsync(1);
 
+        // Assert
 
+        Assert.NotNull(result);
+        Assert.Equal("BMW", result.Model);
 
-            // Act
+        _repositoryMock.Verify(x => x.GetById(1), Times.Once);
 
-            var result = await _repositoryMock.Object
-                .GetById(1);
-
-
-
-            // Assert
-
-            Assert.NotNull(result);
-            Assert.Equal("BMW", result.Model);
-        }
+        _mapperMock.Verify(x => x.Map<CarGetDto>(car), Times.Once);
     }
 }

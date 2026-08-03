@@ -18,7 +18,9 @@ public class CarService : ICarService
         IMapper mapper)
     {
         _repository = repository;
+
         _mapper = mapper;
+
     }
     public async Task<CarGetDto> GetByIdAsync(long id)
     {

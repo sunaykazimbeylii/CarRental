@@ -26,6 +26,8 @@ namespace CarRental.Persistence.Contexts
         public DbSet<Payment> Payments { get; set; }
         public DbSet<Rental> Rentals { get; set; }
         public DbSet<Review> Reviews { get; set; }
+        public DbSet<Feature> Features { get; set; }
+        public DbSet<CarFeature> CarFeatures { get; set; }
 
     }
 }
