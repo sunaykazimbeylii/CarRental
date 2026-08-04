@@ -27,7 +27,6 @@ public class CarServiceTests
     [Fact]
     public async Task GetByIdAsync_Should_Return_Car()
     {
-        // Arrange
 
         var car = new Car
         {
@@ -52,23 +51,20 @@ public class CarServiceTests
   );
 
         _repositoryMock
-            .Setup(x => x.GetById(1))
+            .Setup(x => x.GetByIdAsync(1))
             .ReturnsAsync(car);
 
         _mapperMock
             .Setup(x => x.Map<CarGetDto>(car))
             .Returns(dto);
 
-        // Act
 
         var result = await _service.GetByIdAsync(1);
-
-        // Assert
 
         Assert.NotNull(result);
         Assert.Equal("BMW", result.Model);
 
-        _repositoryMock.Verify(x => x.GetById(1), Times.Once);
+        _repositoryMock.Verify(x => x.GetByIdAsync(1), Times.Once);
 
         _mapperMock.Verify(x => x.Map<CarGetDto>(car), Times.Once);
     }

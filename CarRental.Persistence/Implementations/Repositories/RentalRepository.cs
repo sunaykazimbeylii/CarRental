@@ -4,9 +4,9 @@ using CarRental.Persistence.Contexts;
 
 namespace CarRental.Persistence.Implementations.Repositories
 {
-    internal class BrandRepository : Repository<Brand>,IBrandRepository
+    internal class RentalRepository:Repository<Rental>,IRentalRepository
     {
-        public BrandRepository(AppDbContext context) : base(context) { }
-       
+        public RentalRepository(AppDbContext context) : base(context) { }
+      
     }
 }

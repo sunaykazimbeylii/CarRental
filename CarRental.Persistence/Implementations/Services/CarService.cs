@@ -96,7 +96,7 @@ public class CarService : ICarService
         var entity = await _repository.GetByIdAsync(dto.Id);
 
         if (entity == null)
-            throw new Exception("Car not found");
+            throw new NotFoundException(nameof(Car));
 
         _mapper.Map(dto, entity);
 
@@ -110,7 +110,7 @@ public class CarService : ICarService
         var entity = await _repository.GetByIdAsync(id);
 
         if (entity == null)
-            throw new Exception("Car not found");
+            throw new NotFoundException(nameof(Car));
 
         _repository.Delete(entity);
 

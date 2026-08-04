@@ -27,16 +27,16 @@ namespace CarRental.Persistence.Implementations.Services
             Brand brand = _mapper.Map<Brand>(dto);
               _repository.Add(brand);
             brand.CreatedAt= DateTime.UtcNow;
-            await _repository.SaveChangeAsync();
+            await _repository.SaveChangesAsync();
 
         }
 
         public async Task DeleteAsync(long id)
         {
-            Brand existed= await _repository.GetById(id);
+            Brand existed= await _repository.GetByIdAsync(id);
             if (existed is null) throw new Exception($"Brand is not found");
             _repository.Delete(existed);
-            await _repository.SaveChangeAsync();  
+            await _repository.SaveChangesAsync();  
            
         }
 
@@ -56,7 +56,7 @@ public async Task<IReadOnlyList<BrandGetDto>> GetAllAsync(int page, int take, st
 
     public async Task<BrandGetDto> GetById(long id)
         {
-            Brand? brand = await _repository.GetById(id, nameof(Brand.Cars));
+            Brand? brand = await _repository.GetByIdAsync(id, nameof(Brand.Cars));
             if (brand is null) throw new Exception("brand is not found");
             return _mapper.Map<BrandGetDto>(brand);
         }
@@ -71,7 +71,7 @@ public async Task<IReadOnlyList<BrandGetDto>> GetAllAsync(int page, int take, st
             if (result)
                 throw new Exception($"Brand named'{dto.Name}' already exists");
 
-            Brand existed = await _repository.GetById(id);
+            Brand existed = await _repository.GetByIdAsync(id);
 
             if (existed is null) throw new Exception("Brand is not found");
 
@@ -81,7 +81,7 @@ public async Task<IReadOnlyList<BrandGetDto>> GetAllAsync(int page, int take, st
 
             _repository.Update(existed);
 
-            await _repository.SaveChangeAsync();
+            await _repository.SaveChangesAsync();
 
         }
     }

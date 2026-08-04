@@ -30,9 +30,12 @@ namespace CarRental.Persistence
             ).AddDefaultTokenProviders().AddEntityFrameworkStores<AppDbContext>();
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IBrandRepository, BrandRepository>();
+            services.AddScoped<IRentalRepository, RentalRepository>();
+            services.AddScoped<IPaymentRepository, PaymentRepository>();
 
 
             services.AddScoped<ICarService, CarService>();
+            services.AddScoped<IRentalService, RentalService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 
