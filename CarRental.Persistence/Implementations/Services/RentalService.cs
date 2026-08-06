@@ -52,7 +52,7 @@ public class RentalService : IRentalService
                 throw new InvalidRentalPeriodException();
 
             if (dto.StartDate.Date < DateTime.UtcNow.Date)
-                throw new InvalidRentalPeriodException();
+                throw new PastRentalDateException();
 
             decimal totalPrice = days * car.DailyPrice;
 

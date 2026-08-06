@@ -69,7 +69,7 @@ public class CarsController : ControllerBase
     /// <returns>No content.</returns>
     [Authorize(Roles = "Admin")]
 
-    [HttpPut("{id}")]
+    [HttpPut]
     public async Task<IActionResult> Update(long id, [FromBody] CarUpdateDto dto)
     {
         if (id < 1) return BadRequest();
