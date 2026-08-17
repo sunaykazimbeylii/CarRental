@@ -41,7 +41,7 @@ namespace CarRental.Persistence
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
 
-
+            services.AddHostedService<RentalCleanupService>();
             return services;
 
         }
