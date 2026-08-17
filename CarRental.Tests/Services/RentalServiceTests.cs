@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using CarRental.Application.DTOs.Rental;
 using CarRental.Application.Exceptions;
+using CarRental.Application.Interfaces.Services;
 using CarRental.Application.Services;
 using CarRental.Domain.Entities;
 using CarRental.Domain.Enums;
@@ -9,7 +10,6 @@ using CarRental.Persistence.Implementations.Repositories;
 using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Moq;
-using Xunit;
 
 namespace CarRental.Tests.Services;
 
@@ -97,12 +97,17 @@ public class RentalServiceTests
 
         await context.SaveChangesAsync();
 
+        var mapperMock = new Mock<IMapper>();
+        var emailNotificationServiceMock =
+            new Mock<IEmailNotificationService>();
+
         var service = new RentalService(
             new RentalRepository(context),
             new CarRepository(context),
             new PaymentRepository(context),
-            new Mock<IMapper>().Object,
-            context);
+            mapperMock.Object,
+            context,
+            emailNotificationServiceMock.Object);
 
         var dto = new RentalCreateDto(
             user.Id,
@@ -118,10 +123,8 @@ public class RentalServiceTests
         Assert.Empty(context.Rentals);
         Assert.Empty(context.Payments);
 
-        // Rollback-dan sonra EF Core Change Tracker-i təmizləyirik.
         context.ChangeTracker.Clear();
 
-        // Məlumatı database-dən yenidən oxuyuruq.
         var dbCar = await context.Cars.FindAsync(car.Id);
 
         Assert.NotNull(dbCar);
