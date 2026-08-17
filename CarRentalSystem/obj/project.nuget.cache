@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "QdeEet2lWbw=",
+  "dgSpecHash": "tceghKsbiXQ=",
   "success": true,
   "projectFilePath": "C:\\Users\\Sunay\\source\\repos\\CarRentalSystem\\CarRentalSystem\\CarRentalSystem.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sunay\\.nuget\\packages\\automapper\\16.1.0\\automapper.16.1.0.nupkg.sha512",
     "C:\\Users\\Sunay\\.nuget\\packages\\azure.core\\1.47.1\\azure.core.1.47.1.nupkg.sha512",
     "C:\\Users\\Sunay\\.nuget\\packages\\azure.identity\\1.14.2\\azure.identity.1.14.2.nupkg.sha512",
+    "C:\\Users\\Sunay\\.nuget\\packages\\cloudinarydotnet\\1.29.3\\cloudinarydotnet.1.29.3.nupkg.sha512",
     "C:\\Users\\Sunay\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
     "C:\\Users\\Sunay\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
     "C:\\Users\\Sunay\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\12.1.1\\fluentvalidation.dependencyinjectionextensions.12.1.1.nupkg.sha512",

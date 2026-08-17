@@ -5,6 +5,7 @@ using CarRental.Domain.Entities;
 using CarRental.Persistence.Contexts;
 using CarRental.Persistence.Implementations.Repositories;
 using CarRental.Persistence.Implementations.Services;
+using CarRental.Persistence.Services;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -31,6 +32,7 @@ namespace CarRental.Persistence
             services.AddScoped<ICarRepository, CarRepository>();
             services.AddScoped<IBrandRepository, BrandRepository>();
             services.AddScoped<IRentalRepository, RentalRepository>();
+            services.AddScoped<ICarImageRepository,CarImageRepository>();
             services.AddScoped<IPaymentRepository, PaymentRepository>();
 
 
