@@ -40,7 +40,7 @@ namespace CarRental.Persistence
             services.AddScoped<IRentalService, RentalService>();
             services.AddScoped<IBrandService, BrandService>();
             services.AddScoped<IAuthenticationService, AuthenticationService>();
-
+            services.AddScoped<IEmailNotificationService, EmailNotificationService>();
             services.AddHostedService<RentalCleanupService>();
             return services;
 

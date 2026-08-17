@@ -17,19 +17,23 @@ public class RentalService : IRentalService
     private readonly IPaymentRepository _paymentRepository;
     private readonly IMapper _mapper;
     private readonly AppDbContext _context;
+    private readonly IEmailNotificationService _emailNotificationService;
 
     public RentalService(
         IRentalRepository rentalRepository,
         ICarRepository carRepository,
         IPaymentRepository paymentRepository,
         IMapper mapper,
-        AppDbContext context)
+        AppDbContext context,
+        IEmailNotificationService emailNotificationService
+        )
     {
         _rentalRepository = rentalRepository;
         _carRepository = carRepository;
         _paymentRepository = paymentRepository;
         _mapper = mapper;
         _context = context;
+     _emailNotificationService = emailNotificationService;
     }
 
     public async Task CreateAsync(RentalCreateDto dto)
@@ -82,10 +86,14 @@ public class RentalService : IRentalService
 
             _paymentRepository.Add(payment);
 
+      
             await _context.SaveChangesAsync();
-            throw new TransactionRollbackTestException();//silinecek 
 
             await transaction.CommitAsync();
+
+            _= _emailNotificationService.SendRentalCreatedEmailAsync(
+                dto.UserId,
+                rental.Id);
         }
         catch
         {
