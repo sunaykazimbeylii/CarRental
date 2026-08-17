@@ -4,7 +4,7 @@ using CarRental.Persistence.Contexts;
 
 namespace CarRental.Persistence.Implementations.Repositories
 {
-    internal class CarRepository:Repository<Car>,ICarRepository
+    public class CarRepository:Repository<Car>,ICarRepository
     {
         public CarRepository(AppDbContext context ):base(context) { }
        

@@ -83,6 +83,7 @@ public class RentalService : IRentalService
             _paymentRepository.Add(payment);
 
             await _context.SaveChangesAsync();
+            throw new TransactionRollbackTestException();//silinecek 
 
             await transaction.CommitAsync();
         }

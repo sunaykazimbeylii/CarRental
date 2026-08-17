@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 
 namespace CarRental.Persistence.Implementations.Repositories
 {
-    internal class Repository<T> : IRepository<T> where T : BaseEntity, new()
+    public class Repository<T> : IRepository<T> where T : BaseEntity, new()
     {
         protected readonly DbSet<T> _dbSet;
         protected readonly AppDbContext _context;
